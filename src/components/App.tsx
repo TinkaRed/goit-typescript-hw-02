@@ -54,7 +54,7 @@ const App: React.FC = () => {
     <>
       <SearchBar onSubmit={onSubmit} />
       {error && <ErrorMessage errormessage={error} />}
-      <ImageGallery items={images} onImageClick={setSelectedImage} />
+      <ImageGallery items={images} onImageClick={(image: Image) => setSelectedImage(image)} />
       {loading && <Loader />}
       {images.length > 0 && !loading && <LoadMoreBtn onClick={() => setPage((prev) => prev + 1)} />}
       {selectedImage && <ImageModal selectedImage={selectedImage} closeModal={() => setSelectedImage(null)} />}
