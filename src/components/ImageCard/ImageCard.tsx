@@ -1,7 +1,7 @@
 import styles from "./ImageCard.module.css";
 
 interface Image {
-  urls: { small: string };
+  urls: { small: string; regular: string };
   alt_description: string;
 }
 
@@ -18,4 +18,3 @@ const ImageCard: React.FC<ImageCardProps> = ({ image }) => {
 };
 
 export default ImageCard;
-
